@@ -1,0 +1,410 @@
+:root {
+    --norway-red: #ba0c2f;
+    --norway-blue: #00205b;
+    --norway-white: #ffffff;
+    --deep-blue: #1a3a5f;
+    --light-blue: #4a90e2;
+    --ice-blue: #e6f3ff;
+    --mountain-gray: #5d6d7e;
+    --forest-green: #2e5c3a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: var(--ice-blue);
+}
+
+header {
+    background-color: var(--norway-blue);
+    color: var(--norway-white);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--norway-white);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    color: var(--norway-white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+/* hero*/
+.hero-section {
+    position: relative;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.hero-container {
+    position: relative;
+    height: 100%;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--norway-white);
+    z-index: 2;
+    width: 80%;
+    max-width: 800px;
+}
+
+.norway-title {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.norway-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.norway-btn {
+    background-color: var(--norway-red);
+    color: var(--norway-white);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.norway-btn:hover {
+    background-color: #9a0a26;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* about*/
+.about-section {
+    padding: 5rem 2rem;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--norway-blue);
+    position: relative;
+}
+
+.about-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background-color: var(--norway-red);
+}
+
+.about-text P {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* attractions*/
+.attractions-section {
+    padding: 5rem 2rem;
+    background-color: var(--ice-blue);
+}
+
+.attractions-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.attractions-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--norway-blue);
+    position: relative;
+}
+
+.attractions-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--norway-red);
+}
+
+.attractions-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.attractions-card {
+    background-color: var(--norway-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.attractions-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.attractions-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--norway-blue);
+}
+
+/* facts*/
+.facts-section {
+    padding: 5rem 2rem;
+    background-color: var(--norway-white);
+}
+
+.facts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.facts-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--norway-blue);
+    position: relative;
+}
+
+.facts-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--norway-red);
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.facts-info {
+    background-color: var(--ice-blue);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-left: 4px solid var(--norway-blue);
+}
+
+.facts-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.facts-info i {
+    font-size: 2.5rem;
+    color: var(--norway-blue);
+    margin-bottom: 1rem;
+}
+
+.facts-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--norway-blue);
+}
+
+/* footer*/
+footer {
+    background-color: var(--norway-blue);
+    color: var(--norway-white);
+    padding: 3rem 2rem;
+}
+
+.contacts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contacts p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contacts i {
+    margin-right: 10px;
+    color: var(--norway-white);
+}
+
+.quick-links h3 {
+    margin-bottom: 1rem;
+    color: var(--norway-white);
+}
+
+.quick-links a {
+    display: block;
+    color: var(--norway-white);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.quick-links a:hover {
+    color: var(--norway-red);
+}
+
+.quick-links p {
+    margin-top: 1.5rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem;
+    }
+
+    .norway-title {
+        font-size: 2.5rem;
+    }
+
+    .norway-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .contacts-container {
+        flex-direction: column;
+    }
+}
